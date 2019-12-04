@@ -18,12 +18,13 @@ class App extends Component {
     let newLanguages = [...this.state.languages]
     newLanguages[i].votes++
     const swap = (array, i, j) => {
-      const temp = array[i]
+      let temp = array[i]
       array[i] = array[j]
       array[j] = temp
     }
     this.setState({ languages: newLanguages })
   }
+
   render() {
     return (
       <main>
